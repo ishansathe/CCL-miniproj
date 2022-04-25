@@ -1,0 +1,35 @@
+Following are the requirements to set up the code and get your Code running on EC2 instance of AWS cloud
+  1)Create your EC2 Instance
+  2)You can choose any AMI, but preferably, go for Windows
+  3) Set up the encryption key file  (consider creating a new RSA Key pair)
+      - Name it the same as your EC2 instance for ease of remembering and finding as well (you can choose any name)
+      - Download the .pem file if using windows.
+  4) Click on Launch Instance and then wait till instance is running. Even later, you will have to wait for minimum 4 minutes as it takes some time for instance to be connectable
+  5) Once time has elapsed (say 5 mins) select your EC2 instance and click on 'Connect'
+  6) Choose the RDP Tab and download the RDP Client
+  7) Click on Request password. It will prompt to you, requesting for the key pair (.pem file that you just downloaded). Browse and then select the file
+  8) After clicking next, then the password will be received.
+  9) Now, run the RDP Client that you just downloaded. It will ask you if you trust this server/site on various occasions. Just enter 'Yes'
+  10) Enter the password that you received in step 8). Another trust prompt will appear, Accept it.
+  11) Now, your Virtual OS will start running in a session. 
+  12) Download and Install Xampp on your new Virtual OS from internet through any browser.
+  13) Enable 'MySQL' and 'Apache' options
+  14) Now, we paste the above code in the 'dashboard' of where Xampp is stored
+  15) If on windows, you are likely to have Xampp downloaded in C: drive.
+  16) Go in there, then click on dashboard
+  17) You will see that there are a couple of files there. These files are unnecessary and hence can be deleted. But if you want to use it for some purpose other than just testing this code then you can rename the files as well
+like how you can either rename the actual 'dashboard' folder to something else. Or.. you could just post the folder containing your code in the dashboard directly
+  18) Now, for this instance to be able to be accessed by common users. We need to change some settings on our Virtual OS
+  19) Open Windows Network Security
+      -Click on FIrewall and Network Protection
+      -Go to Advanced Settings
+      -Go to Windows Defender Firewall Properties
+      -In the Public profile tab, disable the Firewall
+      -Click on Apply and then ok. 
+  20) You are good to go
+  21) Now, connect to your EC2 instance as a regular user by entering the IP Address given in the details section of your EC2 Instance
+  22) As you connect to your instance, you may see that a folder exists in a tree named 'wdl_proj'
+  23) Click on the folder.
+  24) Now, the page you see is the home page. However, since you have not logged in. The contents are not properly visible
+  25) Thus, in the URL Tab, you add '/php3p21.php' which is actually our registration page.
+  26) Anything beyond this point will be smooth.
